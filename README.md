@@ -1,66 +1,29 @@
-## Foundry
+## Audit Anomalies Archive
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repository is designed to maintain a record of unique and fundamental vulnerabilities I discover during my smart contract audits. All the issues documented here have been reproduced using Foundry.
 
 Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Issue 1
+### Denial of Service(DoS) due to hardcoding of DECIMALS
 
-## Documentation
+Test
 
-https://book.getfoundry.sh/
+```
+forge test --contracts ./test/Issue1.t.sol -vv
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
 ```
 
-### Test
+#### Contract
 
-```shell
-$ forge test
-```
+[Uwerx_exp.sol](src/test/Uwerx_exp.sol)
 
-### Format
+#### Link Reference
 
-```shell
-$ forge fmt
-```
+https://twitter.com/deeberiroz/status/1686683788795846657
 
-### Gas Snapshots
+https://twitter.com/CertiKAlert/status/1686667720920625152
 
-```shell
-$ forge snapshot
-```
+https://etherscan.io/tx/0x3b19e152943f31fe0830b67315ddc89be9a066dc89174256e17bc8c2d35b5af8
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+---
