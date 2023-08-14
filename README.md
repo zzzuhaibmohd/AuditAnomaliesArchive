@@ -18,5 +18,6 @@ forge test --contracts ./test/Issue1.t.sol -vv
 [Vault4626.sol](src/Issue1/Vault4626.sol)
 
 #### Link Reference
+[Read The Issue#1 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-1-7caf714fec8b)
 
 ---
