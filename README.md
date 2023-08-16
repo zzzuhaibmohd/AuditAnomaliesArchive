@@ -4,6 +4,7 @@ This repository is designed to maintain a record of unique and fundamental vulne
 
 ## List of Issues
 [20230814 Issue#1](#issue-1---denial-of-servicedos-due-to-hardcoding-of-decimals)
+[20230816 Issue#2](#issue-1---denial-of-servicedos-due-to-hardcoding-of-decimals)
 
 ---
 
@@ -11,7 +12,7 @@ This repository is designed to maintain a record of unique and fundamental vulne
 
 Test
 ```
-forge test --contracts ./test/Issue1.t.sol -vv
+forge test --match-contract IssueOneTest -vv
 ```
 
 #### Contract
@@ -20,4 +21,18 @@ forge test --contracts ./test/Issue1.t.sol -vv
 #### Link Reference
 [Read The Issue#1 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-1-7caf714fec8b)
 
+---
+### Issue 2 - Users losing funds due to missing functionality to refund extra ETHER sent
+
+Test
+```
+forge test --match-contract IssueTwoTest -vv
+```
+
+#### Contract
+[MetaNFT.sol](src/Issue2/MetaNFT.sol)
+
+#### Link Reference
+[Read The Issue#2 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-1-7caf714fec8b)
+[Link to Report]()
 ---
