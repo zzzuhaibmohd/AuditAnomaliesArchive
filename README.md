@@ -12,6 +12,9 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
+Summary
+
+The developers typically make assumptions, such as assuming that all ERC20 tokens have 18 decimal places. They then hardcode this assumed value into the contract. However, issues arise when ERC20 tokens with different decimal places interact with the contract. It's at this point that they realize the mistake they've made.
 
 Test
 ```
@@ -26,6 +29,9 @@ forge test --match-contract IssueOneTest -vv
 
 ---
 ### Issue 2 - Users losing funds due to missing functionality to refund extra ETHER sent
+Summary
+
+When implementing payable functions, the developer must monitor the amount of Ether sent to them via `msg.value`. If this amount exceeds the required value, it's crucial for the developer to initiate a refund back to the user. Failing to execute this step accurately could essentially be viewed as taking funds from the user without rightful cause.
 
 Test
 ```
