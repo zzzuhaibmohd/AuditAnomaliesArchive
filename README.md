@@ -64,7 +64,7 @@ forge test --match-contract IssueThreeTest -vv
 [BatchTokenTransfer.sol](src/Issue3/BatchTokenTransfer.sol)
 
 #### Link Reference
-[Read The Issue#3 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-1-7caf714fec8b)
+[Read The Issue#3 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-3-bf0eccfbaf0c)
 
 [Link to Report](https://github.com/UNSNARL/audit-reports/blob/main/Dropzone_Komet_Security_Assessment.pdf)
 
