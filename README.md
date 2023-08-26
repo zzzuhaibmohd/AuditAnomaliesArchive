@@ -9,6 +9,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20230816 Issue#2](#issue-2---users-losing-funds-due-to-missing-functionality-to-refund-extra-ether-sent)
 
+[20230826 Issue#2](#issue-2---users-losing-funds-due-to-missing-functionality-to-refund-extra-ether-sent)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -28,7 +30,7 @@ forge test --match-contract IssueOneTest -vv
 [Read The Issue#1 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-1-7caf714fec8b)
 
 ---
-### Issue 2 - Users losing funds due to missing functionality to refund extra ETHER sent
+### Issue 2 - Users losing funds due to missing functionality to refund extra ether(msg.value) sent
 Summary
 
 When implementing payable functions, the developer must monitor the amount of Ether sent to them via `msg.value`. If this amount exceeds the required value, it's crucial for the developer to initiate a refund back to the user. Failing to execute this step accurately could essentially be viewed as taking funds from the user without rightful cause.
@@ -45,5 +47,25 @@ forge test --match-contract IssueTwoTest -vv
 [Read The Issue#2 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-2-eb34fcbcee18)
 
 [Link to Report](https://github.com/solodit/solodit_content/blob/main/reports/AuditOne/2023-04-13-Lotaheros.md#calling-mintfounderhero-may-may-accidently-lock-user-funds)
+
+---
+
+### Issue 3 - Skipping the payment of platform_fee because of user controlled input parameters
+Summary
+
+The issue highlights the potential vulnerabilities arising from unchecked user inputs in smart contracts. It demonstrates how failure to validate inputs can lead to malicious users evading fees. Smart contract developers are urged to assess input requirements and conduct thorough testing of input parameters controlled by users.
+
+Test
+```
+forge test --match-contract IssueThreeTest -vv
+```
+
+#### Contract
+[BatchTokenTransfer.sol](src/Issue3/BatchTokenTransfer.sol)
+
+#### Link Reference
+[Read The Issue#3 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-1-7caf714fec8b)
+
+[Link to Report](https://github.com/UNSNARL/audit-reports/blob/main/Dropzone_Komet_Security_Assessment.pdf)
 
 ---
