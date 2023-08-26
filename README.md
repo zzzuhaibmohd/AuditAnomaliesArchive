@@ -9,7 +9,7 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20230816 Issue#2](#issue-2---users-losing-funds-due-to-missing-functionality-to-refund-extra-ether-sent)
 
-[20230826 Issue#2](#issue-2---users-losing-funds-due-to-missing-functionality-to-refund-extra-ether-sent)
+[20230826 Issue#3](#issue-3---skipping-the-payment-of-platform_fee-because-of-user-controlled-input-parameters)
 
 ---
 
