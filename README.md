@@ -11,7 +11,7 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20230826 Issue#3](#issue-3---skipping-the-payment-of-platform_fee-because-of-user-controlled-input-parameters)
 
-[20230908 Issue#4](#issue-3---skipping-the-payment-of-platform_fee-because-of-user-controlled-input-parameters)
+[20230908 Issue#4](#issue-4---custom-upgrdable-contract-leading-to-double-iniitlization)
 
 ---
 
@@ -86,6 +86,7 @@ forge test --match-contract IssueFourTest -vv
 [Upgradable.sol](src/Issue4/Upgradable.sol)
 
 #### Link Reference
+[Read The Issue#4 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-4-222bfdad66ec)
 
 
 ---
