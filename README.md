@@ -11,6 +11,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20230826 Issue#3](#issue-3---skipping-the-payment-of-platform_fee-because-of-user-controlled-input-parameters)
 
+[20230908 Issue#4](#issue-3---skipping-the-payment-of-platform_fee-because-of-user-controlled-input-parameters)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -67,5 +69,23 @@ forge test --match-contract IssueThreeTest -vv
 [Read The Issue#3 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-3-bf0eccfbaf0c)
 
 [Link to Report](https://github.com/UNSNARL/audit-reports/blob/main/Dropzone_Komet_Security_Assessment.pdf)
+
+---
+### Issue 4 - Custom Upgrdable Contract leading to double iniitlization
+
+Summary
+
+Writing custom code for functions or logic that's already available is not considered good practice. Furthermore, if there are no unit tests in place, it's a recipe for disaster.
+
+Test
+```
+forge test --match-contract IssueFourTest -vv
+```
+
+#### Contract
+[Upgradable.sol](src/Issue4/Upgradable.sol)
+
+#### Link Reference
+
 
 ---
