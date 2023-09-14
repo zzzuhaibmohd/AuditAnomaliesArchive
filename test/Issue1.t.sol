@@ -8,7 +8,6 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "src/Issue1/Vault4626.sol";
 
 contract IssueOneTest is Test {
-
     ERC20 public weth_Token;
     ERC20 public usdc_Token;
 
@@ -18,7 +17,6 @@ contract IssueOneTest is Test {
     Vault4626 theVault;
 
     function setUp() public {
-
         vm.createSelectFork("https://rpc.ankr.com/eth", 17907297);
 
         theVault = new Vault4626();
@@ -29,7 +27,7 @@ contract IssueOneTest is Test {
 
     function testWithdrawWithWETHWillPASS() public {
         vm.startPrank(weth_user);
-        
+
         weth_Token.approve(address(theVault), weth_Token.balanceOf(weth_user));
         theVault.deposit(address(weth_Token), 50);
         theVault.withdraw(address(weth_Token), 50);
@@ -39,17 +37,31 @@ contract IssueOneTest is Test {
 
     function testWithdrawWithUSDCWillFAIL() public {
         vm.startPrank(usdc_user);
-        
+
         usdc_Token.approve(address(theVault), usdc_Token.balanceOf(usdc_user));
         theVault.deposit(address(usdc_Token), 5000);
 
         vm.expectRevert("ERC20: transfer amount exceeds balance");
         theVault.withdraw(address(usdc_Token), 1);
-        //Even though the user has depisited a large amount i.e., 5000 USDC, 
+        //Even though the user has depisited a large amount i.e., 5000 USDC,
         //Due to the bug in the withdraw function, the user cannot even withdraw 1 USDC
 
         vm.stopPrank();
     }
 
+    function testERC20balance() public {
+        IERC20 erc20 = IERC20(usdc_Token);
+        uint256 totalAmount = erc20.balanceOf(usdc_user);
 
+        console.log("USDC balance: ", totalAmount);
+
+        console.log("////////////////////////////");
+
+        totalAmount = 0;
+
+        erc20 = IERC20(weth_Token);
+        totalAmount = erc20.balanceOf(weth_user);
+
+        console.log("WETH balance: ", totalAmount);
+    }
 }
