@@ -13,6 +13,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20230908 Issue#4](#issue-4---custom-upgrdable-contract-leading-to-double-iniitlization)
 
+[20230914 Issue#5](#issue-4---custom-upgrdable-contract-leading-to-double-iniitlization)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -90,3 +92,21 @@ forge test --match-contract IssueFourTest -vv
 
 
 ---
+### Issue 5 - Custom Upgrdable Contract leading to double iniitlization
+
+Summary
+
+Writing custom code for functions or logic that's already available is not considered good practice. Furthermore, if there are no unit tests in place, it's a recipe for disaster.
+
+Test
+```
+forge test --match-contract IssueFiveTest -vv
+```
+
+#### Contract
+[SafeOwner.sol](src/Issue5/SafeOwner.sol)
+
+#### Link Reference
+[Read The Issue#5 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-4-222bfdad66ec)
+
+[Link to Report](https://github.com/UNSNARL/audit-reports/blob/main/Dropzone_Komet_Security_Assessment.pdf)
