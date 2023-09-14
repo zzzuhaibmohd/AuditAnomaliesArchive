@@ -11,9 +11,9 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20230826 Issue#3](#issue-3---skipping-the-payment-of-platform_fee-because-of-user-controlled-input-parameters)
 
-[20230908 Issue#4](#issue-4---custom-upgrdable-contract-leading-to-double-iniitlization)
+[20230908 Issue#4](#issue-4---custom-upgradable-contract-leading-to-double-initialization)
 
-[20230914 Issue#5](#issue-4---custom-upgrdable-contract-leading-to-double-iniitlization)
+[20230914 Issue#5](#issue-5---usage-of-an-incorrect-version-of-ownable-library-for-upgradable-contracts)
 
 ---
 
