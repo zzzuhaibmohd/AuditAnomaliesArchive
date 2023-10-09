@@ -15,6 +15,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20230914 Issue#5](#issue-5---usage-of-an-incorrect-version-of-ownable-library-for-upgradable-contracts)
 
+[20231009 Issue#6](#issue-5---usage-of-an-incorrect-version-of-ownable-library-for-upgradable-contracts)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -110,3 +112,23 @@ forge test --match-contract IssueFiveTest -vv
 [Read The Issue#5 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-5-c4a47c3e042a)
 
 [Link to Report](https://github.com/UNSNARL/audit-reports/blob/main/Dropzone_Komet_Security_Assessment.pdf)
+
+---
+### Issue 6 - Immutable address causing DoS due to Blacklist or Private Key Compromise
+
+Summary
+
+Declaring an address as immutable in a smart contract can lead to issues, especially when the address serves vital functions like fee collection. The presence of blacklisting capabilities in tokens or private key compromise can disrupt protocol operations, making it essential for developers and auditors to assess these scenarios carefully.
+
+Test
+```
+forge test --match-contract IssueSixTest -vv
+```
+
+#### Contract
+[BlackList.sol](src/Issue6/BlackList.sol)
+
+#### Link Reference
+[Read The Issue#6 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-5-c4a47c3e042a)
+
+[Link to Report](https://www.codehawks.com/report/cllcnja1h0001lc08z7w0orxx#M-02)
