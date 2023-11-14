@@ -21,6 +21,8 @@ contract IssueFiveTest is Test {
     function testCallToInitialize() external {
         assertEq(SafeOwner(proxy).owner(), address(0)); //owner set to address(0)
         assertEq(SafeOwner(proxy).collectFee(), true);
+
+        console.log(SafeOwner(proxy).WBNB());
     }
 
     function testCallToOnlyOwnerFunctionFails() public {

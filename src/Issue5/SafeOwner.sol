@@ -12,9 +12,15 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract SafeOwner is UUPSUpgradeable, Initializable, Ownable {
     bool public collectFee;
 
+    address public immutable WBNB;
+
     function _authorizeUpgrade(address newImplementation) internal pure override {
         (newImplementation);
         // _onlyOwner();
+    }
+
+    constructor(address _wbnb) {
+        WBNB = _wbnb;
     }
 
     function initialize() public initializer {
