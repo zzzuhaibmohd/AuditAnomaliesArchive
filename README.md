@@ -17,6 +17,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20231009 Issue#6](#issue-6---immutable-address-causing-dos-due-to-blacklist-or-private-key-compromise)
 
+[20231114 Issue#7](#issue-6---immutable-address-causing-dos-due-to-blacklist-or-private-key-compromise)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -132,3 +134,21 @@ forge test --match-contract IssueSixTest -vv
 [Read The Issue#6 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-6-b6ed431e82b7)
 
 [Link to Report](https://www.codehawks.com/report/cllcnja1h0001lc08z7w0orxx#M-02)
+
+---
+### Issue 7 - Use of selfdestruct leading to Denial of Service of functions of the Bridge contract
+
+Summary
+
+When transfering native token balances (For Example: ETH), ensure proper tracking for each user. In EVM-compatible chains, native tokens can be forcefully sent to the contract via selfdestruct. If not handled promptly, this situation may result in contract malfunction, causing a Denial of Service (DoS) in our example.
+
+Test
+```
+forge test --match-contract IssueSevenTest -vv
+```
+
+#### Contract
+[TestBridge.sol](src/Issue7/TestBridge.sol)
+
+#### Link Reference
+[Read The Issue#7 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-7-1728d9fef43a)
