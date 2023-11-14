@@ -41,7 +41,7 @@ contract ProductManager is UUPSUpgradeable, OwnerGovernable {
         __owner_governable_init();
     }
 
-    function _authorizeUpgrade(address newImplementation) internal override pure {
+    function _authorizeUpgrade(address newImplementation) internal pure override {
         (newImplementation);
     }
 }
