@@ -156,7 +156,7 @@ forge test --match-contract IssueSevenTest -vv
 [Read The Issue#7 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-7-1728d9fef43a)
 
 ---
-### Issue 8 - Not Following CEI pattern leads to cross-function reentancy
+### Issue 8 - Not Following CEI pattern leads to cross-function re-entrancy
 
 Summary
 
