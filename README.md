@@ -17,9 +17,9 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20231009 Issue#6](#issue-6---immutable-address-causing-dos-due-to-blacklist-or-private-key-compromise)
 
-[20231114 Issue#7](#issue-6---immutable-address-causing-dos-due-to-blacklist-or-private-key-compromise)
+[20231114 Issue#7](#issue-7---use-of-selfdestruct-leading-to-denial-of-service-of-functions-of-the-bridge-contract)
 
-[20231123 Issue#8](#issue-6---immutable-address-causing-dos-due-to-blacklist-or-private-key-compromise)
+[20231123 Issue#8](#issue-8---not-following-cei-pattern-leads-to-cross-function-re-entrancy)
 
 ---
 
