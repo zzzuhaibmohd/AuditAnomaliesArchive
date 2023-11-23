@@ -19,6 +19,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20231114 Issue#7](#issue-6---immutable-address-causing-dos-due-to-blacklist-or-private-key-compromise)
 
+[20231123 Issue#8](#issue-6---immutable-address-causing-dos-due-to-blacklist-or-private-key-compromise)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -152,3 +154,22 @@ forge test --match-contract IssueSevenTest -vv
 
 #### Link Reference
 [Read The Issue#7 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-7-1728d9fef43a)
+
+---
+### Issue 8 - Not Following CEI pattern leads to cross-function reentancy
+
+Summary
+
+The issue revolves around the misconception that ReentrancyGuard alone is sufficient for preventing reentrancy vulnerabilities in smart contracts. It's evident that developers often overlook the importance of following the Checks-Effects-Interactions pattern, leading to potential exploits. In a specific example with a token bridge protocol, this flaw allows an attacker to manipulate the withdrawal process, exploiting a missed adherence to the CEI pattern and resulting in cross-function re-entrancy.
+
+Test
+```
+forge test --match-contract IssueEightTest -vv
+```
+
+#### Contract
+[TestBridge.sol](src/Issue8/TestBridge.sol)
+
+#### Link Reference
+[Read The Issue#8 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-8-c574ffa4f439)
+
