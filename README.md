@@ -21,7 +21,7 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20231123 Issue#8](#issue-8---not-following-cei-pattern-leads-to-cross-function-re-entrancy)
 
-[20231219 Issue#9](#issue-8---not-following-cei-pattern-leads-to-cross-function-re-entrancy)
+[20231219 Issue#9](#issue-9---denial-of-servicedos-of-users-due-to-inconsistent-implementation-of-pausable-pattern)
 
 
 ---
@@ -193,5 +193,5 @@ forge test --match-contract IssueNineTest -vv
 [PauseMePlease.sol](src/Issue8/PauseMePlease.sol)
 
 #### Link Reference
-[Read The Issue#9 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-8-c574ffa4f439)
+[Read The Issue#9 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-9-c9e6c1a53ea3)
 
