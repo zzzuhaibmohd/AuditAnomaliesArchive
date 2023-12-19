@@ -21,6 +21,9 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20231123 Issue#8](#issue-8---not-following-cei-pattern-leads-to-cross-function-re-entrancy)
 
+[20231219 Issue#9](#issue-8---not-following-cei-pattern-leads-to-cross-function-re-entrancy)
+
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -172,4 +175,23 @@ forge test --match-contract IssueEightTest -vv
 
 #### Link Reference
 [Read The Issue#8 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-8-c574ffa4f439)
+
+
+---
+### Issue 9 - Denial of Service(DoS) of users due to inconsistent implementation of Pausable pattern
+
+Summary
+
+Smart contracts employ the pausable pattern to facilitate emergency halts, enabling developers to pause contracts during migrations, upgrades, or potential security threats. However, potential issues arise when different contracts inconsistently implement the pausable pattern, impacting users during emergencies, emphasizing the need for a unified pausing mechanism across multiple contracts to maintain consistency and prevent disruptions in critical scenarios.
+
+Test
+```
+forge test --match-contract IssueNineTest -vv
+```
+
+#### Contract
+[PauseMePlease.sol](src/Issue8/PauseMePlease.sol)
+
+#### Link Reference
+[Read The Issue#9 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-8-c574ffa4f439)
 
