@@ -23,7 +23,7 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20231219 Issue#9](#issue-9---denial-of-servicedos-of-users-due-to-inconsistent-implementation-of-pausable-pattern)
 
-[20240210 Issue#10](#issue-9---denial-of-servicedos-of-users-due-to-inconsistent-implementation-of-pausable-pattern)
+[20240210 Issue#10](#issue-10---loss-of-user-deposited-funds-due-to-missing-array-length-input-validation)
 
 ---
 
@@ -208,8 +208,8 @@ forge test --match-contract IssueTenTest -vv
 ```
 
 #### Contract
-[PauseMePlease.sol](src/Issue10/SplitTheNFT.sol)
+[SplitTheNFT.sol](src/Issue10/SplitTheNFT.sol)
 
 #### Link Reference
-[Read The Issue#10 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-9-c9e6c1a53ea3)
+[Read The Issue#10 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-10-c3373196923e)
 
