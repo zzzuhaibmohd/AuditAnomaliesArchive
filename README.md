@@ -23,6 +23,7 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20231219 Issue#9](#issue-9---denial-of-servicedos-of-users-due-to-inconsistent-implementation-of-pausable-pattern)
 
+[20240210 Issue#10](#issue-9---denial-of-servicedos-of-users-due-to-inconsistent-implementation-of-pausable-pattern)
 
 ---
 
@@ -190,8 +191,25 @@ forge test --match-contract IssueNineTest -vv
 ```
 
 #### Contract
-[PauseMePlease.sol](src/Issue8/PauseMePlease.sol)
+[PauseMePlease.sol](src/Issue9/PauseMePlease.sol)
 
 #### Link Reference
 [Read The Issue#9 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-9-c9e6c1a53ea3)
+
+---
+### Issue 10 - Loss of user deposited funds due to missing array length input validation
+
+Summary
+If there are functions that can be called by users and accept input parameters, it is always a good practice to validate these inputs for length, size, data type, etc. Skipping to do so can result in unexpected behavior. One such impact in this case was be users losing their deposited funds.
+
+Test
+```
+forge test --match-contract IssueTenTest -vv
+```
+
+#### Contract
+[PauseMePlease.sol](src/Issue10/SplitTheNFT.sol)
+
+#### Link Reference
+[Read The Issue#10 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-9-c9e6c1a53ea3)
 
