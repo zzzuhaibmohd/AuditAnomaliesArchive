@@ -26,8 +26,8 @@ contract CoinSwitch is Ownable {
 
     function burnOldTokens() external onlyOwner {
         require(block.number > eventEndBlock, "eventEndBlock yet to finish");
-        uint256 balanceBMI = oldToken.balanceOf(address(this));
-        oldToken.transfer(address(0), balanceBMI);
+        uint256 balanceOldToken = oldToken.balanceOf(address(this));
+        oldToken.transfer(address(0), balanceOldToken);
     }
 
     function swapTokens(uint256 lockPeriod) external {
