@@ -25,7 +25,7 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20240210 Issue#10](#issue-10---loss-of-user-deposited-funds-due-to-missing-array-length-input-validation)
 
-[20240412 Issue#11](#issue-10---loss-of-user-deposited-funds-due-to-missing-array-length-input-validation)
+[20240412 Issue#11](#issue-11---tokens-stuck-in-the-contract-during-migration-forever-as-a-result-of-user-behaviour)
 
 ---
 
