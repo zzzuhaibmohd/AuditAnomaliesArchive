@@ -25,6 +25,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20240210 Issue#10](#issue-10---loss-of-user-deposited-funds-due-to-missing-array-length-input-validation)
 
+[20240412 Issue#11](#issue-10---loss-of-user-deposited-funds-due-to-missing-array-length-input-validation)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -212,4 +214,16 @@ forge test --match-contract IssueTenTest -vv
 
 #### Link Reference
 [Read The Issue#10 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-10-c3373196923e)
+
+---
+### Issue 11 - Tokens stuck in the contract during migration forever as a result of user behaviour
+
+Summary
+Besides approaching problems from a developer/auditor mindset, it's essential to occasionally analyze and consider things from a user perspective. In essence, the assumption underlying the issues is: what if the user doesn't take a certain action, such as token migration?
+
+#### Contract
+[CoinSwitch.sol](src/Issue11/CoinSwitch.sol)
+
+#### Link Reference
+[Read The Issue#11 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-11-7e6f4d423663)
 
