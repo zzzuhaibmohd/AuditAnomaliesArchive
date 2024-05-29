@@ -27,7 +27,7 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20240412 Issue#11](#issue-11---tokens-stuck-in-the-contract-during-migration-forever-as-a-result-of-user-behaviour)
 
-[20240529 Issue#12](#issue-11---tokens-stuck-in-the-contract-during-migration-forever-as-a-result-of-user-behaviour)
+[20240529 Issue#12](#issue-12---denial-of-servicedos-of-users-via-using-the-erc20-permit-function)
 
 ---
 
