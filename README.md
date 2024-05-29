@@ -27,6 +27,8 @@ Inspired from SunSec(https://twitter.com/1nf0s3cpt)
 
 [20240412 Issue#11](#issue-11---tokens-stuck-in-the-contract-during-migration-forever-as-a-result-of-user-behaviour)
 
+[20240529 Issue#12](#issue-11---tokens-stuck-in-the-contract-during-migration-forever-as-a-result-of-user-behaviour)
+
 ---
 
 ### Issue 1 - Denial of Service(DoS) due to hardcoding of DECIMALS
@@ -227,3 +229,19 @@ Besides approaching problems from a developer/auditor mindset, it's essential to
 #### Link Reference
 [Read The Issue#11 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-11-7e6f4d423663)
 
+---
+### Issue 12 - Denial of Service(DoS) of users via using the ERC20 permit function
+
+Summary
+A Denial of Service attack vector that can affect honest users by hiding within a popular EIP designed to improve user experience. This highlights the importance of thinking outside the box during contract audits and having a comprehensive understanding of blockchain works.
+
+Test
+```
+forge test --match-contract IssueTwelveTest -vv
+```
+
+#### Contract
+[PermitStake.sol](src/Issue12/PermitStake.sol)
+
+#### Link Reference
+[Read The Issue#12 Blog](https://zuhaibmd.medium.com/audit-anomalies-archive-issue-12-6b6c34f11156)
